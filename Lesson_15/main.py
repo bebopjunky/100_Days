@@ -1,4 +1,3 @@
-# TODO: 2.Check Resources
 MENU = {
     "espresso": {
         "ingredients": {
