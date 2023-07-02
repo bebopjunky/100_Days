@@ -82,7 +82,7 @@ while choice != "off":
     elif choice == "off":
         break
     elif choice == "espresso":
-        resource_check(MENU["espresso"]["ingredients"]["water"],0,
+        resource_check(MENU["espresso"]["ingredients"]["water"], 0,
                        MENU["espresso"]["ingredients"]["coffee"], MENU["espresso"]["cost"])
     elif choice == "latte":
         resource_check(MENU["latte"]["ingredients"]["water"], MENU["latte"]["ingredients"]["milk"],
