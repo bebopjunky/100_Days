@@ -1,7 +1,11 @@
-from turtle import Turtle, Screen
+from prettytable import PrettyTable
 
-bob = Turtle()
-my_screen = Screen()
+table = PrettyTable()
+table.field_names = ["Pokemon Name","Type"]
+table.add_row(["Pikachu","Electric"])
+table.add_row(["Squirtle","Water"])
+table.add_row(["Charmander","Fire"])
+
+print(table)
 
 
-my_screen.exitonclick()
