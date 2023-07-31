@@ -34,17 +34,31 @@ def save():
     website = website_entry.get()
     username = username_entry.get()
     password = password_entry.get()
+    new_data = {
+        website: {
+            "username": username,
+            "password": password,
+        }
+
+    }
+
     if len(website) == 0 or len(password) == 0:
         messagebox.showerror(title="Empty Fields", message="Do not leave empty fields")
     else:
-        is_ok = messagebox.askokcancel(title="Confirmation",
-                                       message=f"Are these details correct: \n {website} ¦ {username} ¦ {password} ")
-        if is_ok:
-            f = open("data.txt", "a")
-            f.write(f"{website} ¦ {username} ¦ {password}\n")
+        try:
+            with open("data.json", "r") as f:
+                data = json.load(f)
+        except FileNotFoundError:
+            with open("data.json", "w") as f:
+                json.dump(new_data, f, indent=4)
+        else:
+            data.update(new_data)
+            with open("data.json", "w") as f:
+                json.dump(data, f, indent=4)
+
+        finally:
             website_entry.delete(0, 'end')
             password_entry.delete(0, 'end')
-            f.close()
 
     # delete function
 
