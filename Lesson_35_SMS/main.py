@@ -33,9 +33,9 @@ if rain:
 
     client = Client(account_sid, auth_token)
     message = client.messages.create(
-      from_='+447862137479',
+      from_='
       body='Get an umbrella',
-      to='+447739104731'
+      to=
     )
 
 
