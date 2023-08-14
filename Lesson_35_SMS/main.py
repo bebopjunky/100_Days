@@ -3,7 +3,7 @@ import os
 from twilio.rest import Client
 
 ENDPOINT = "https://api.openweathermap.org/data/2.8/onecall"
-API = "caee46e9e99be2fda623af3e12889f8d"
+API = 
 LAT = 50.822529
 LON = -0.137163
 
@@ -27,8 +27,8 @@ for codes in daily:
     if int(conditions) < 700:
         rain = True
 
-account_sid = 'ACf12f62297cfd7d52a6f185c4cf5ce2bf'
-auth_token = '773a0eb97a3cbd89e8957f5e98c5a975'
+account_sid = 
+auth_token =
 if rain:
 
     client = Client(account_sid, auth_token)
