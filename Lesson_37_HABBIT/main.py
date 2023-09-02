@@ -1,7 +1,7 @@
 import requests
 import datetime
 
-PIXELA_TOKEN = "asDGasdgSDFGasdfgdg"
+PIXELA_TOKEN = ""
 PIXELA_USERNAME = "bebopjunky"
 PIXELA_GRAPH = "graph1"
 today = datetime.date.today()
@@ -20,7 +20,7 @@ pixela_parameters = {
     "notMinor": "yes"
 }
 
-#response = requests.post(url=PIXELA_USER_ENDPOINT, json=pixela_parameters)
+# response = requests.post(url=PIXELA_USER_ENDPOINT, json=pixela_parameters)
 
 graph_parameters = {
     "id": PIXELA_GRAPH,
@@ -34,18 +34,17 @@ headers = {
     "X-USER-TOKEN": PIXELA_TOKEN
 }
 
-#response = requests.post(url=PIXELA_GRAPH_ENDPOINT,json=graph_parameters,headers=headers)
-
+# response = requests.post(url=PIXELA_GRAPH_ENDPOINT,json=graph_parameters,headers=headers)
 
 
 pixel_post_parameters = {
     "date": today.strftime("%Y%m%d"),
     "quantity": "120"
 }
-#response = requests.post(url=PIXELA_PIXEL_POST_ENDPOINT,json=pixel_post_parameters,headers=headers)
+# response = requests.post(url=PIXELA_PIXEL_POST_ENDPOINT,json=pixel_post_parameters,headers=headers)
 
 pixel_put_parameters = {
     "quantity": "180"
 }
 
-response = requests.put(url=PIXELA_PIXEL_PUT_ENDPOINT,json=pixel_put_parameters,headers=headers)
+response = requests.put(url=PIXELA_PIXEL_PUT_ENDPOINT, json=pixel_put_parameters, headers=headers)
